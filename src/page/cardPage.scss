@@ -1,0 +1,109 @@
+.cardPage {
+  background-color: #100802;
+  background: url('../../public/img/hookan-bg.jpg');
+  display: flex;
+  gap: 100px;
+
+  .contentPage {
+    width: 1262px;
+    &__title {
+      text-align: center;
+      font-size: 72px;
+      letter-spacing: -0.05em;
+      margin-top: 40px;
+      span {
+        color: #C1A300;
+      }
+    }
+
+    &__cotegory {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .tobacco{
+        width: 420px;
+        height: auto;
+        &__title {
+          text-align: center;
+          font-size: 56px;
+          letter-spacing: -0.05em;
+        }
+
+        &__cotegory {
+          h2 {
+            margin-top: 30px;
+            letter-spacing: -0.05em;
+            font-size: 40px;
+            color: #C1A300;
+            font-weight: 400;
+          }
+
+          ol {
+            text-decoration: none;
+            padding: 0px;
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            li {
+              display: inline-block;
+              list-style: none;
+              font-size: 24px;
+              padding: 2px;
+            }
+          }
+          
+        }
+      }
+
+      .bowl {
+        width: 390px;
+        height: auto;
+        &__title {
+          text-align: center;
+          font-size: 56px;
+          letter-spacing: -0.05em;
+        }
+
+        &__cotegory {
+          &_title {
+            margin-top: 30px;
+            letter-spacing: -0.05em;
+            font-size: 40px;
+            color: #C1A300;
+            font-weight: 400;
+          }
+
+          &_blok {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 15px;
+
+            &-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: 24px;
+              padding: 2px;
+
+              span {
+                width: 74px;
+                color: #C1A300;
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__info {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+      color: #C1A300;
+    }
+  }
+}

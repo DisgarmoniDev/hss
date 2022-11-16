@@ -1,0 +1,23 @@
+.galleryPage {
+  background-color: #100802;
+  display: flex;
+  gap: 100px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      font-size: 72px;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+      margin: 30px 0;
+
+      span{
+        color: #C1A300;
+      }
+    }
+  }
+}
