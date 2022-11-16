@@ -1,0 +1,63 @@
+.simpleMapPage{
+  background-color: #100802;
+  display: flex;
+  gap: 100px;
+
+  .title {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    h2 {
+          font-size: 72px;
+          letter-spacing: -0.05em;
+          font-weight: 400;
+          span{
+            color: #C1A300;
+          }
+        }
+      
+  }
+
+  &__content{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+    justify-content: center;
+
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .block{
+        h3{
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: -0.05em;
+          color: #C1A300;
+        }
+        p{
+          font-size: 32px;
+          letter-spacing: -0.05em;
+          white-space: pre-line;
+        }
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: white;
+          font-size: 32px;
+          letter-spacing: -0.05em;
+        }
+      }
+    }
+
+    &-map{
+      img{
+        width: 980px;
+      }
+    }
+  }
+}

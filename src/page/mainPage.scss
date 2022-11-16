@@ -1,0 +1,283 @@
+.content {
+  background-color: #100802;
+  background: url('../../public/img/bg-main.png');
+  display: flex;
+  gap: 100px;
+
+  .mainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .name{
+      display: flex;
+      margin-top: 50px;
+      gap: 70px;
+
+      &__title{
+        p {
+          width: 250px;
+          height: 246px;
+          font-size: 72px;
+          line-height: 82px;
+          letter-spacing: -0.05em;
+
+          span {
+            color: #C1A300;
+          }
+        }
+      }
+    }
+
+    .description {
+      width: 750px;
+      height: 54px;
+      margin-top: 50px;
+      p{
+        font-size: 24px;
+        line-height: 27px;
+        span {
+          color: #C1A300;
+        }
+      }
+    }
+
+    .advantages {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin-top: 90px;
+
+      &__item{
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        p {
+          text-align: center;
+          font-size: 18px;
+        }
+
+        .border {
+          width: 130px;
+          height: 130px;
+          border: 1px solid #C1A300;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .change-img {
+            position: relative;
+            perspective: 1000px;
+          }
+
+          .iimg-1 {
+            width: 70px;
+            height: 67px;
+          }
+          .iimg-2 {
+            width: 95px;
+            height: 52px;
+          }
+          .iimg-3 {
+            width: 79px;
+            height: 43px;
+          }
+          .iimg-4 {
+            width: 68px;
+            height: 68px;
+          }
+
+          .change-img:hover .front-side-img {
+            transform: rotateY(180deg);
+          }
+          .change-img:hover .back-side-img {
+            transform: rotateY(360deg);
+          }
+            /* Стороны изображения */
+          .front-side-img, .back-side-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+          }
+
+          .front-side-img img {
+            max-width: 100%;
+            min-width: 100%;
+            height: auto;
+          }
+
+          .back-side-img img {
+            max-width: 100%;
+            min-width: 100%;
+            height: auto;
+            transform: scaleX(-1);/* Отражаем изображение по горизонтали */
+          }
+
+          .back-side-img {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+
+    .modalBtn {
+      width: 370px;
+      height: 60px;
+      margin-top: 80px;
+      font-family: 'Courier New';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      color: #ffffff;
+      background: transparent;
+      cursor: pointer;
+      border: 1px solid #C1A300;
+      border-radius: 20px;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+    
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .modal {
+      background-color: #fff;
+      width: 70%;
+      max-width: 500px;
+      padding: 40px 30px;
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.5s ease-in-out;
+    
+      svg {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 24px;
+        width: 24px;
+        opacity: 0.3;
+        cursor: pointer;
+    
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &__form {
+        color: #100802;
+
+        .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+          color: #100802;
+          font-size: 15px;
+          font-family: 'Courier New', arial;
+        }
+        .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
+          padding: 22px;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          .title {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          label {
+            font-size: 14px;
+
+            input {
+              font-family: 'Courier New', arial;
+              width: 240px;
+              height: 25px;
+              border:1px solid rgba(0, 0, 0, 0.37);
+              border-radius: 3px;
+              font-size: 18px;
+            }
+          }
+
+          .div-error {
+            color: #800000;
+            font-size: 12px;
+          }
+
+          .btn-submit {
+            margin-top: 20px;
+            width: 240px;
+            height: 30px;
+            font-family: 'Courier New';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            color: #100802;
+            background: transparent;
+            cursor: pointer;
+            border: 1px solid #C1A300;
+            border-radius: 20px;
+
+            &:hover {
+              transform: translateY(-1px);
+            }
+          
+            &:active {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+
+    .overlay.animated {
+      opacity: 0;
+      visibility: hidden;
+    
+      .modal {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -30%);
+        transition-delay: 0.2s;
+      }
+    
+      &.show {
+        opacity: 1;
+        visibility: visible;
+    
+        .modal {
+          opacity: 1;
+          visibility: visible;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
